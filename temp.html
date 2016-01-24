@@ -1,0 +1,46 @@
+<html>
+<script>
+var Myo1 = require('myo');
+
+
+//Start talking with Myo Connect
+Myo1.connect('com.quasar.test');
+//Myo.setLockingPolicy('none');
+
+Myo1.on('connected', function(data,timestamp){
+    document.write('Myo Connected successfully!');
+});
+
+Myo1.on('pose',function(){
+	//document.write(this.batteryLevel);
+	//document.write(this.arm);
+});
+
+Myo1.on('fist', function(){
+    document.write('fist closed');
+    this.vibrate();
+});
+
+Myo1.on('fist_off', function(){
+    document.write('fist released');
+});
+
+Myo1.on('wave_in',function(){
+	document.write('wave_in recorded');
+});
+
+
+Myo1.on('wave_out',function(){
+	document.write('wave_out recorded');
+});
+
+Myo1.on('fingers_spread',function(){
+	document.write('fingers_spread recorded');
+});
+
+
+Myo1.on('double_tap',function(){
+	document.write('double_tap recorded');
+});
+</script>
+</html>

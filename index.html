@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Simple Racer</title>
+		<link href="racer.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				
+			}
+			canvas {
+				display: block;
+				border: solid 5px #444;
+				margin: 0 auto;
+
+			}
+			#info {
+				display: none;
+				
+			}
+		</style>
+	</head>
+	<body bgcolor="black">
+
+		<h2 id="spmon">hello</h2>	
+		<canvas id="canvas" value="0" width="1000" height="820"></canvas>
+		<div id="info">
+			Player: x <span id="px">0</span> y <span id="py"></span>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="helpers.js"></script>
+		<script src="collision.js"></script>
+		<script src="car.js"></script>
+		<script src="racer.js"></script>
+		
+		
+	</body>
+</html>
